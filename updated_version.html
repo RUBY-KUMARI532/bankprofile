@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile Maker</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            background-color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>✨ Profile Generator ✨</h1>
+    
+    <input type="text" id="nameBox" placeholder="Enter your name"><br><br>
+    <input type="text" id="ageBox" placeholder="Enter your age"><br><br>
+    <input type="text" id="hobbyBox" placeholder="Enter your hobby"><br><br>
+    
+    <button onclick="makeProfile()">Create Profile!</button>
+
+    <br><br><hr><br>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="150" height="150">
+    
+    <p id="displayName"></p>
+    <p id="displayAge"></p>
+    <p id="displayHobby"></p>
+
+    <br><hr><br>
+
+    <h3>Choose your Theme:</h3>
+    <button onclick="hackerTheme()">Hacker Theme</button>
+    <button onclick="oceanTheme()">Ocean Theme</button>
+    <button onclick="princessTheme()">Princess Theme</button>
+
+
+    <script>
+        // Function 1: Read Inputs and Change Text
+        function makeProfile() {
+            let userName = document.getElementById("nameBox").value;
+            let userAge = document.getElementById("ageBox").value;
+            let userHobby = document.getElementById("hobbyBox").value;
+
+            document.getElementById("displayName").innerText = "Name: " + userName;
+            document.getElementById("displayAge").innerText = "Age: " + userAge;
+            document.getElementById("displayHobby").innerText = "Hobby: " + userHobby;
+        }
+
+        // Function 2: Hacker Theme (Black background, Green text)
+        function hackerTheme() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "lightgreen"; 
+        }
+
+        // Function 3: Ocean Theme (Blue background, White text)
+        function oceanTheme() {
+            document.body.style.backgroundColor = "darkblue";
+            document.body.style.color = "white";
+        }
+
+        // Function 4: Princess Theme (Pink background, Dark Red text)
+        function princessTheme() {
+            document.body.style.backgroundColor = "lightpink";
+            document.body.style.color = "darkred";
+        }
+    </script>
+
+</body>
+</html>
