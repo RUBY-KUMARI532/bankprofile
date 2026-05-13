@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Bank Profile</title>
+
+            <body style= "text-align:center; background-color:blue; margin-top:100px;">
+    </head>
+    <body>
+        <input type="text" id="nameBox" placeholder="Enter your name"><br><br>
+        <input type="text" id="ageBox" placeholder="Enter your age"><br><br>
+        <input type="text" id="hobbyBox" placeholder="Enter your hobby"><br><br>
+        <br><br>
+        <button onclick="makeProfile()">Create Profile</button>
+        <p id="open"></p>
+        <p id="close"></p>
+        <p id="help"></p>
+            <img src="avtar.png" width="200px" height="150px">
+            <button onclick="hackerTheme()">Hacker Theme</button>
+            <button onclick="oceanTheme()">Ocean Theme</button>
+            <button onclick="princessTheme()">Princess Theme</button>
+            <script>
+                 function hackerTheme() {
+                let name= document.getElementById("nameBox").value;
+                document.getElementById("open").innerText = "Welcome to the Bank"; 
+                document.body.style.backgroundColor="black";
+                 }
+             function oceanTheme() {
+                let age= document.getElementById("ageBox").value;
+                document.getElementById("close").innerText = "Finance management "; 
+                document.body.style.backgroundColor="green";
+             }
+             function princessTheme() {
+                let hobby= document.getElementById("hobbyBox").value;
+                document.getElementById("help").innerText = "Customer Service "; 
+                document.body.style.backgroundColor="pink";
+            }
+ 
+            </script>
+            
+        </body>
+    
+    </html>
